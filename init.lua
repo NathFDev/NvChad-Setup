@@ -17,11 +17,11 @@ opt.smartindent = true
 opt.hlsearch = false
 opt.incsearch = true
 
--- Term
-opt.termguicolors = true
+-- Timeoutlen
+opt.timeoutlen = 100
 
 -- Scroll
-opt.scrolloff = 10
+opt.scrolloff = 8
 
 -- Update time
 opt.updatetime = 50
