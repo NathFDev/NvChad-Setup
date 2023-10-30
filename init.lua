@@ -1,4 +1,6 @@
 local opt = vim.opt
+dofile(vim.g.base46_cache .. "defaults")
+dofile(vim.g.base46_cache .. "syntax")
 
 -- Toggle number
 opt.relativenumber = true

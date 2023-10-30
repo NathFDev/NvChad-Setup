@@ -1,8 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
   dependencies = {
-    "nvim-treesitter/nvim-treesitter-textobjects",
     "windwp/nvim-ts-autotag",
   },
   config = function()
@@ -50,11 +48,6 @@ return {
         "regex",
         "python",
         "scss",
-      },
-      -- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
-      context_commentstring = {
-        enable = true,
-        enable_autocmd = false,
       },
     }
   end,

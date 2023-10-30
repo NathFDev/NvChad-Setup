@@ -41,7 +41,6 @@ return {
           end,
         },
         null_ls.builtins.diagnostics.ruff,
-        null_ls.builtins.diagnostics.luacheck,
       },
       on_attach = function(client, bufnr)
         if client.supports_method "textDocument/formatting" then

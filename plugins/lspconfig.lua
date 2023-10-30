@@ -64,6 +64,36 @@ return {
       on_attach = on_attach,
     }
 
+    lspconfig["custom_elements_ls"].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+
+    lspconfig["volar"].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+
+    lspconfig["jsonls"].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+
+    lspconfig["astro"].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+
+    lspconfig["sqlls"].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+
+    lspconfig["dockerls"].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+
     lspconfig["html"].setup {
       on_attach = on_attach,
       capabilities = capabilities,
@@ -89,7 +119,18 @@ return {
     lspconfig["emmet_language_server"].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+      filetypes = {
+        "html",
+        "typescriptreact",
+        "javascriptreact",
+        "css",
+        "sass",
+        "scss",
+        "less",
+        "svelte",
+        "vue",
+        "astro",
+      },
     }
 
     lspconfig["graphql"].setup {

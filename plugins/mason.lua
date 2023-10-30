@@ -3,11 +3,13 @@ return {
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
     "jay-babu/mason-null-ls.nvim",
+    "jay-babu/mason-nvim-dap.nvim",
   },
   config = function()
     local mason = require "mason"
     local mason_lspconfig = require "mason-lspconfig"
     local mason_null_ls = require "mason-null-ls"
+    local mason_dap = require "mason-nvim-dap"
     mason.setup() -- no options yet
 
     mason_lspconfig.setup {
@@ -45,10 +47,18 @@ return {
         "goimports-reviser", -- go formatter
         "gospel", -- go linter
         "eslint_d", -- js linter
-        "luacheck", -- lua linter
         "mypy", -- python linter
         "ruffle", -- python formatter
         "eslint_d", -- js linter
+      },
+      -- auto-install configured servers (with lspconfig)
+      automatic_installation = true, -- not the same as ensure_installed
+    }
+
+    mason_dap.setup {
+      ensure_installed = {
+        "js",
+        "delve",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
