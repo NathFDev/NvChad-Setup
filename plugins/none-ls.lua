@@ -13,6 +13,7 @@ return {
     "astro",
     "svelte",
     "javascriptreact",
+    "typescriptreact",
   },
   config = function()
     local null_ls_status_ok, null_ls = pcall(require, "null-ls")

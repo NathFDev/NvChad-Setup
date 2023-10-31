@@ -35,11 +35,6 @@ return {
     lspconfig["tsserver"].setup {
       on_attach = on_attach,
       capabilities = capabilities,
-      init_options = {
-        preferences = {
-          disableSuggestions = true,
-        },
-      },
       commands = {
         OrganizeImports = {
           organize_imports,
@@ -62,6 +57,16 @@ return {
     lspconfig["tailwindcss"].setup {
       capabilities = capabilities,
       on_attach = on_attach,
+      root_dir = util.root_pattern(
+        "tailwind.config.js",
+        "tailwind.config.cjs",
+        "tailwind.config.mjs",
+        "tailwind.config.ts",
+        "postcss.config.js",
+        "postcss.config.cjs",
+        "postcss.config.mjs",
+        "postcss.config.ts"
+      ),
     }
 
     lspconfig["custom_elements_ls"].setup {
