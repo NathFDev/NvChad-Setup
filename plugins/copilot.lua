@@ -1,8 +1,8 @@
 return {
-  "zbirenbaum/copilot.lua",
-  event = "BufEnter",
-  cmd = "Copilot",
+  "github/copilot.vim",
+  lazy = false,
   config = function()
-    require("copilot").setup()
+    vim.g.copilot_no_tab_map = true
+    vim.g.copilot_assume_mapped = true
   end,
 }
